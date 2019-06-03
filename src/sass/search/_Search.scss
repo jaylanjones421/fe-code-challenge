@@ -1,15 +1,40 @@
 $spot-list-width: 460px;
 
 @import "spot-list/SpotList";
+@import "search-content-modal/SearchContentModal";
 
 .Search {
     width: 100%;
 }
 
 .Search-content {
+    background-color: #1D426C;
     position: absolute;
     top: 0;
     left: $spot-list-width;
     width: calc(100vw - #{$spot-list-width});
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fade-enter {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+.fade-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
 }

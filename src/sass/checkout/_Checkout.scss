@@ -1,3 +1,102 @@
 .Checkout {
-    //
+
+}
+
+#checkout-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+    #checkout-modal {
+        background-color: #fff;
+        min-width: 30%;
+        border: 1px solid rgba(128, 128, 128, 0.295);;
+        border-radius: 10px;
+        min-height: 500px;
+        overflow: hidden;
+
+        #checkout-navbar {
+            background-color: $color-shift;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+
+            button {
+                color: #fff;
+            }
+        }
+        #checkout-body {
+            padding: 15px 25px;
+
+            #checkout-header {
+                display: flex;
+                padding-bottom: 20px;
+                border-bottom: 1px solid rgba(128, 128, 128, 0.295);
+
+                img {
+                    border-radius: 4px;
+                }
+                #checkout-header-details {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 0 20px;
+                }
+            }
+        #checkout-form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+
+            .error-message {
+                color: $color-stop;
+            }
+
+            label {
+                font-weight: 600;
+                color:  rgba(128, 128, 128, 0.89);
+            }
+            .checkout-form-input {
+                border: 1px solid rgba(128, 128, 128, 0.295);;
+                height: 40px;
+                border-radius: 4px;
+                margin:10px 0;
+                padding-left: 10px;
+            }
+            .checkout-form-input:invalid {
+                border: 1px solid $color-stop;
+
+            }
+            .checkout-form-input:focus {
+                -webkit-appearance: none;
+                outline: 0px ;
+                -webkit-box-shadow: 0px 0px 0px 1px $color-go;
+                -moz-box-shadow: 0px 0px 0px 1px $color-go;
+                box-shadow: 0px 0px 0px 1px $color-go;
+            }
+            #submit-checkout {
+                -webkit-appearance: none;
+                outline: 0px ;
+                margin: 15px 0;
+                position: relative;
+                left:50%;
+                color:#fff;
+                background-color: $color-go;
+                width: 50%;
+                height: 40px;
+                border-radius: 4px;
+            }
+            #submit-checkout:active {
+                box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3);
+            }
+
+            #submit-checkout:disabled {
+                background-color: $color-dashboard;
+            }
+        }
+        }
+    }
 }
